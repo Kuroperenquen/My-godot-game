@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cnddk8pkuflqj"]
+
+[ext_resource type="Texture2D" uid="uid://dkk7opuk2iirc" path="res://sprite space/Moon tileset 2d.png" id="1_mi635"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ucgvs"]
+size = Vector2(84, 35)
+
+[node name="platform" type="AnimatableBody2D" unique_id=2124599164]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=816475315]
+texture = ExtResource("1_mi635")
+region_enabled = true
+region_rect = Rect2(311, 734, 86, 37)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1041090576]
+position = Vector2(1, 0.5)
+shape = SubResource("RectangleShape2D_ucgvs")

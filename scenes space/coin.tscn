@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://kwbjoxtbejao"]
+
+[ext_resource type="Script" uid="uid://dwovk0iqvns1t" path="res://scripts space/coin.gd" id="1_oby5h"]
+[ext_resource type="Texture2D" uid="uid://brvck8surlkj" path="res://sprite space/coins.png" id="2_1fkk4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ucgvs"]
+radius = 14.0
+
+[node name="solar panel" type="Area2D" unique_id=2083406172]
+script = ExtResource("1_oby5h")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=175063086]
+position = Vector2(6.75, -10.250002)
+scale = Vector2(0.1104651, 0.12181817)
+texture = ExtResource("2_1fkk4")
+region_enabled = true
+region_rect = Rect2(43, 112, 258, 275)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1967374813]
+position = Vector2(7, -11)
+shape = SubResource("CircleShape2D_ucgvs")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
